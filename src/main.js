@@ -1,23 +1,22 @@
 import './style.css'
 import L from 'leaflet';
 
+document.addEventListener('DOMContentLoaded', () => {
 // 地図を用意
-const map = L.map(document.querySelector('#map')).setView([34.7220098, 137.6998409], 17);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+  const map = L.map(document.querySelector('#map')).setView([34.7220098, 137.6998409], 17);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
 // 編集対象の図形を用意
-const rect = L.rectangle([
-  [34.7220098, 137.6998409],
-  [34.7240098, 137.6998409],
-  [34.7230098, 137.6948409],
-  [34.7220098, 137.6948409],
-]);
-rect.addTo(map)
+  const rect = L.rectangle([
+    [34.7220098, 137.6998409],
+    [34.7240098, 137.6998409],
+    [34.7230098, 137.6948409],
+    [34.7220098, 137.6948409],
+  ]);
+  rect.addTo(map)
 
-// 操作関連のイベントハンドラーセット
-document.addEventListener('DOMContentLoaded', () => {
   // 操作用のダイアログの開く閉じる
   const controlPanel = document.querySelector('.control-panel');
   rect.on('click', () => controlPanel?.classList.add('show'))
