@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vite + TS</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+  <script type="module" crossorigin src="/assets/index-c647aa2b.js"></script>
+  <link rel="stylesheet" href="/assets/index-be1edaf0.css">
+</head>
+<body>
+<div id="map"></div>
+<div class="control-panel">
+  <div class="header">
+    <span>文字を入力すると図形内に反映されます</span>
+    <button type="button" class="control-panel-close-btn">閉じる</button>
+  </div>
+  <textarea class="control-panel-text-input"></textarea>
+  <label>文字サイズ<input name="font-size" type="range" min="0" max="10"></label>
+  <label>文字太さ<input name="font-weight" type="range" min="0" max="1200"></label>
+  <label>文字色<input name="font-color" type="color"></label>
+</div>
+
+</body>
+</html>
